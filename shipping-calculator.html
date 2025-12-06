@@ -22,9 +22,7 @@
         <button onclick="
             printkey({key: '-'});
         ">-</button>
-        <button onclick="
-            printkey({key: 'Reset'})
-        ">Reset</button>
+        <button class="reset">Reset</button>
 
     </body>
     <script>
@@ -42,5 +40,7 @@
                 printElement.innerHTML = inputElement.value.slice(0,-1);
             }
         }
+        const resetElement = document.querySelector('.reset');
+        resetElement.addEventListener('click', () => printkey({key: 'Reset'}));
     </script>
 </html> 
