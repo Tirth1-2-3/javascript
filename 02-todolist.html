@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Todo List
+        </title>
+    </head>
+    <style>
+        .test {
+            height: 50px;
+            width: 100px;
+            background-color: red;
+        }
+        .test-inner{
+            height: 30px;
+            width: 50px;
+            background-color: blue;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <p>Todo List</p>
+        <input class="input" onkeydown="
+            if (event.key === 'Enter') addtodo();
+        ">
+        <button onclick="addtodo();">Add</button>
+        <p class="print"></p>
+        <div class="test"><div class="test-inner">a</div></div>
+    </body>
+    <script>
+        const todolist = [];
+        function addtodo(){
+            const inputElement = document.querySelector('.input'); 
+            todolist.push(inputElement.value);
+            const printElement = document.querySelector('.print');
+            if (todolist.length == 1){
+                printElement.innerHTML = inputElement.value;
+            }
+            else{
+                printElement.innerHTML += `<br>${inputElement.value}`;
+            }
+            inputElement.value = '';
+        }
+        const printinHTML = 'hello'
+    </script>
+</html> 

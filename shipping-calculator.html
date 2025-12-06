@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Real time printing
+        </title>
+    </head>
+    <body>
+        <input placeholder="Type something" class="js-input-button" onkeydown="
+            printkey(event);
+        ">
+        <p class="js-print-para"></p>
+        <button onclick="
+            printkey({key: '1'});
+        ">1</button>
+        <button onclick="
+            printkey({key: '2'});
+        ">2</button>
+        <button onclick="
+            printkey({key: '+'});
+        ">+</button>
+        <button onclick="
+            printkey({key: '-'});
+        ">-</button>
+        <button onclick="
+            printkey({key: 'Reset'})
+        ">Reset</button>
+
+    </body>
+    <script>
+        function printkey(event){
+            const inputElement = document.querySelector('.js-input-button');
+            const printElement = document.querySelector('.js-print-para');
+            if (event.key == 'Reset'){
+                printElement.innerHTML = '';
+                return;
+            }
+            if (event.key != 'Backspace'){
+                printElement.innerHTML += event.key;
+            }
+            else{
+                printElement.innerHTML = inputElement.value.slice(0,-1);
+            }
+        }
+    </script>
+</html> 
