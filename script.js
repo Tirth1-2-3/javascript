@@ -10,7 +10,7 @@ greetUser(user1);
 greetUser(user2);
 
 const greetUserArrow = (user) => {
-    console.log(`Hello, ${user}! from Arrow Function fasdfas`)
+    console.log(`Hello, ${user}! from Arrow Function`)
 }
 
 greetUserArrow(user1);
