@@ -16,7 +16,7 @@ const greetUserArrow = (user) => {
 greetUserArrow(user1);
 greetUserArrow(user2);
 
-
+greetUser('Peter');
 class Account {
     constructor(name, age) {
         this.name = name;
