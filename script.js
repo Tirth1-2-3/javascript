@@ -17,6 +17,7 @@ greetUserArrow(user1);
 greetUserArrow(user2);
 
 greetUser('Peter');
+greetUser('David');
 class Account {
     constructor(name, age) {
         this.name = name;
